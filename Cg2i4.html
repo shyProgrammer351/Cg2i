@@ -1,0 +1,101 @@
+<html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7250753558435816" crossorigin="anonymous"></script> 		<link rel="stylesheet" href="../layout.css"> 		<script type="text/javascript" src="../functions.js"></script> 		<script type="text/javascript" src="../Js0C1f/C1204.js"></script> 	</head> 	<body onload='sP3f1();' onkeydown='sP3f4()' oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> C 프로그래밍 </div> 			<div id = "navigationBox"><ol><li><a href='../Cf1i/Cf1i1.html'>출력</a></li><li><a href='../Cf2i/Cf2i1.html'>입력</a></li><li><a href='../Cf3i/Cf3i1.html'>변수/연산자</a></li><li><a href='../Cf4i/Cf4i1.html'>선택문(삼항연산자/switch)</a></li><li><a href='../Cf5i/Cf5i1.html'>선택문(if)</a></li><li><a href='../Cf6i/Cf6i1.html'>반복문(while)</a></li><li><a href='../Cf7i/Cf7i1.html'>반복문(for)</a></li><li><a href='../Cf8i/Cf8i1.html'>배열</a></li><li><a href='../Cf9i/Cf9i1.html'>문자열</a></li><li><a href='../Cg0i/Cg0i1.html'>함수</a></li><li><a href='../Cg1i/Cg1i1.html'>포인터</a></li><li><a href='../Cg2i/Cg2i1.html'>파일입출력</a></li><ul><li><a href='../Cg2i/Cg2i1.html'>파일 복사</a></li><li><a href='../Cg2i/Cg2i2.html'>영한 사전</a></li><li><a href='../Cg2i/Cg2i3.html'>날씨 뉴스</a></li><li><a href='../Cg2i/Cg2i4.html'>스포츠 뉴스</a></li><ul><li><a href='Cg2i4.html'>코드읽기</a></li><li><a href='Cg2i4a.html'>알고리즘</a></li><li><a href='Cg2i4k.html'>키워드</a></li><li><a href='Cg2i4b.html'>빈칸채우기</a></li><li><a href='Cg2i4s.html'>실행순서</a></li><li><a href='Cg2i4m.html'>실행상태</a></li><li><a href='https://github.com/CodeReading101/C/blob/main/Chapter12/SportsNews.c' target='code'>소스코드</a></li></ul><li><a href='../Cg2i/Cg2i5.html'>미로 맵 출력</a></li></ul><li><a href='../Cg3i/Cg3i1.html'>열거형/구조체/동적할당</a></li><li><a href='../Cg4i/Cg4i1.html'>함수자료전달</a></li><li><a href='../Cg5i/Cg5i1.html'>전처리기/파일분할</a></li></ol></div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>파일에서 야구 경기 정보를 읽어들여 그 결과를 바탕으로 스포츠 뉴스를 출력하는 문제입니다 이를 해결하는 다음 프로그램을 해석하세요 참고로, 야구 경기 정보는 아래와 같이 '정보 [ 탭 ] 정보 [ 탭 ] 정보 [ 탭 ] ...'의 구조로 저장되어 있습니다. 
+<pre>
+--------- 파일 baseball1.txt의 내용 --------- 
+15	롯데	KT	10	1	김승회	정대현	정훈	6회초1아웃	2	박진형
+18	한화	SK	8	4	정우람	문승원	강경학	6회초1아웃	3	김재영
+21	LG	KIA	6	1	오석주	강이준	양원혁	2회초2아웃	2	오지환
+--------- 파일 baseball2.txt의 내용 --------- 
+18	한화	SK	8	4	정우람	문승원	강경학	6회초1아웃	3	김재영
+--------- 파일 baseball3.txt의 내용 --------- 
+21	LG	KIA	6	1	오석주	강이준	양원혁	2회초2아웃	2	오지환
+</pre>
+관련신문기사 - http://news1.kr/articles/?2246990</pre> 				<pre class='selectable'>파일이름을 입력해 주세요 : <b><font color='red'>baseball1.txt</font></b>
+( KT 1 : 롯데 10 )
+KT는 15일 열린 프로야구 롯데와의 홈 경기에서 1-10점으로 크게 패하며 홈 팬들을 실망시켰다. 
+KT는 정대현을 선발로 등판시켰고 롯데는 김승회가 나섰다. 롯데는 정훈이 맹활약을 펼쳤다. 
+정훈은 6회초1아웃에 맞이한 타석에서 2점을 뽑아내며, 롯데의 9점차 승리를 이끈 일등공신이 됐다. 
+KT는 박진형을 끝까지 공략하지 못하며 안방에서 롯데에 9점차 승리를 내주었다.
+( SK 4 : 한화 8 )
+SK는 18일 열린 프로야구 한화와의 홈 경기에서 4-8점으로 크게 패하며 홈 팬들을 실망시켰다. 
+SK는 문승원을 선발로 등판시켰고 한화는 정우람가 나섰다. 한화는 강경학이 맹활약을 펼쳤다. 
+강경학은 6회초1아웃에 맞이한 타석에서 3점을 뽑아내며, 한화의 4점차 승리를 이끈 일등공신이 됐다. 
+SK는 김재영을 끝까지 공략하지 못하며 안방에서 한화에 4점차 승리를 내주었다.
+( KIA 1 : LG 6 )
+KIA는 21일 열린 프로야구 LG와의 홈 경기에서 1-6점으로 크게 패하며 홈 팬들을 실망시켰다. 
+KIA는 강이준을 선발로 등판시켰고 LG는 오석주가 나섰다. LG는 양원혁이 맹활약을 펼쳤다. 
+양원혁은 2회초2아웃에 맞이한 타석에서 2점을 뽑아내며, LG의 5점차 승리를 이끈 일등공신이 됐다. 
+KIA는 오지환을 끝까지 공략하지 못하며 안방에서 LG에 5점차 승리를 내주었다.
+</pre><br><pre class='selectable'>파일이름을 입력해 주세요 : <b><font color='red'>baseball2.txt</font></b>
+( SK 4 : 한화 8 )
+SK는 18일 열린 프로야구 한화와의 홈 경기에서 4-8점으로 크게 패하며 홈 팬들을 실망시켰다. 
+SK는 문승원을 선발로 등판시켰고 한화는 정우람가 나섰다. 한화는 강경학이 맹활약을 펼쳤다. 
+강경학은 6회초1아웃에 맞이한 타석에서 3점을 뽑아내며, 한화의 4점차 승리를 이끈 일등공신이 됐다. 
+SK는 김재영을 끝까지 공략하지 못하며 안방에서 한화에 4점차 승리를 내주었다.
+</pre><br><pre class='selectable'>파일이름을 입력해 주세요 : <b><font color='red'>baseball3.txt</font></b>
+( KIA 1 : LG 6 )
+KIA는 21일 열린 프로야구 LG와의 홈 경기에서 1-6점으로 크게 패하며 홈 팬들을 실망시켰다. 
+KIA는 강이준을 선발로 등판시켰고 LG는 오석주가 나섰다. LG는 양원혁이 맹활약을 펼쳤다. 
+양원혁은 2회초2아웃에 맞이한 타석에서 2점을 뽑아내며, LG의 5점차 승리를 이끈 일등공신이 됐다. 
+KIA는 오지환을 끝까지 공략하지 못하며 안방에서 LG에 5점차 승리를 내주었다.
+</pre><br> 	  				<h4>알고리즘</h4> 				<pre style='white-space:normal;'>프로그램시작 <br>&nbsp; &nbsp;야구 경기 정보 파일 열기 <br>&nbsp; &nbsp;파일에서 한 경기씩 주요 경기 내용을 추출하기 <br>&nbsp; &nbsp;추출한 내용을 바탕으로 스포츠 기사 자동 생성 <br>&nbsp; &nbsp;야구 경기 정보 파일 닫기 <br>프로그램 종료 <br></pre> 		 				<br><h4>프로그램 코드 <input id='btn' type='button' value='실행순서 및 메모리상태 확인' onclick='sP3f5();'/></h4>  				<div id = "codeBox"><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./Chapter12/SportsNews.c</font>
+</pre><pre id="code0" class="unselectable codeClass">	#include &lt;stdio.h&gt;
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">//<b> 프로그램시작 </b></font>
+</pre>
+<pre id="code1" class="unselectable codeClass">1	int main() {
+</pre><pre id="code0" class="unselectable codeClass">		char date[1024]="", winningTeam[1024]="", losingTeam[1024]="";
+</pre><pre id="code0" class="unselectable codeClass">		int  winningPoint=0, losingPoint=0, bestPointScore=0;
+</pre><pre id="code0" class="unselectable codeClass">		char winningPitcher[1024]="", losingPitcher[1024]="";
+</pre><pre id="code0" class="unselectable codeClass">		char bestPlayer[1024]="", bestPlayPoint[1024]="", missedPlayer[1024]="";
+</pre><pre id="code0" class="unselectable codeClass">		char filename[1024]="", line[1024]="";
+</pre>
+<pre id="code2" class="unselectable codeClass">2		<font color='red' title="파일 포인터형">FILE *</font>inFile = NULL;
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		printf( "파일이름을 입력해 주세요 : " );
+</pre><pre id="code0" class="unselectable codeClass">		scanf( "%s", filename );
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 야구 경기 정보 파일 열기 </b></font>
+</pre>
+<pre id="code3" class="unselectable codeClass">3		if ( ( inFile = <font color='red' title="파일 열기 함수">fopen</font>( filename, "<font color='red' title="텍스트 파일 읽기모드">rt</font>" ) ) == NULL ) {
+</pre><pre id="code0" class="unselectable codeClass">			printf( "[오류] 파일을 열 수 없습니다!" );
+</pre>
+<pre id="code4" class="unselectable codeClass">4			return -1;
+</pre><pre id="code0" class="unselectable codeClass">		}
+</pre><pre id="code0" class="unselectable codeClass"> 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 파일에서 한 경기씩 주요 경기 내용을 추출하기  </b></font>
+</pre>
+<pre id="code5" class="unselectable codeClass">5		while ( <font color='red' title="파일에서 한 줄씩 읽는 함수">fgets</font>( line, 1024, inFile ) != NULL ) {
+</pre>
+<pre id="code6" class="unselectable codeClass">6			if( sscanf( line, "%s\t%s\t%s\t%d\t%d\t%s\t%s\t%s\t%s\t%d\t%s\n",
+</pre><pre id="code0" class="unselectable codeClass">				date, winningTeam, losingTeam, &winningPoint, &losingPoint,
+</pre><pre id="code0" class="unselectable codeClass">				winningPitcher, losingPitcher,
+</pre><pre id="code0" class="unselectable codeClass">				bestPlayer, bestPlayPoint, &bestPointScore, missedPlayer ) == 0 ) {
+</pre><pre id="code0" class="unselectable codeClass">				printf( "[오류] 한 경기씩 주요 경기 내용 읽어올 수 없습니다." );
+</pre>
+<pre id="code7" class="unselectable codeClass">7				break;
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 추출한 내용을 바탕으로 스포츠 기사 자동 생성 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			printf( "\n\n( %s %d : %s %d )\n",
+</pre><pre id="code0" class="unselectable codeClass">				losingTeam, losingPoint, winningTeam, winningPoint );
+</pre><pre id="code0" class="unselectable codeClass">			printf( "%s는 %s일 열린 프로야구 %s와의 홈 경기에서 %d-%d점으로 크게 패하며 ",
+</pre><pre id="code0" class="unselectable codeClass">				losingTeam, date, winningTeam, losingPoint, winningPoint );
+</pre><pre id="code0" class="unselectable codeClass">			printf( "홈 팬들을 실망시켰다. \n%s는 %s을 선발로 등판시켰고 %s는 %s가 나섰다. ",
+</pre><pre id="code0" class="unselectable codeClass">			 losingTeam, losingPitcher, winningTeam, winningPitcher );
+</pre><pre id="code0" class="unselectable codeClass">			printf( "%s는 %s이 맹활약을 펼쳤다. \n%s은 %s에 맞이한 타석에서 %d점을 뽑아내며, ",
+</pre><pre id="code0" class="unselectable codeClass">				winningTeam, bestPlayer, bestPlayer, bestPlayPoint, bestPointScore );
+</pre><pre id="code0" class="unselectable codeClass">			printf( "%s의 %d점차 승리를 이끈 일등공신이 됐다. \n%s는 %s을 끝까지 공략하지 못하며 ",
+</pre><pre id="code0" class="unselectable codeClass">				winningTeam, ( winningPoint - losingPoint ), losingTeam, missedPlayer );
+</pre>
+<pre id="code8" class="unselectable codeClass">8			printf( "안방에서 %s에 %d점차 승리를 내주었다.", winningTeam, ( winningPoint - losingPoint ) );
+</pre><pre id="code0" class="unselectable codeClass">		}
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 야구 경기 정보 파일 닫기 </b></font>
+</pre>
+<pre id="code9" class="unselectable codeClass">9		<font color='red' title="파일 닫기 함수">fclose</font>( inFile );
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 프로그램 종료 </b></font>
+</pre>
+<pre id="code10" class="unselectable codeClass">10		return 0;
+</pre><pre id="code0" class="unselectable codeClass">	}
+</pre></div>	 	 				<br><h4>키워드 설명</h4> 				<pre id = "sP3d3" style='white-space:normal;'></pre> 			 				<h4>실행 순서</h4> 				<pre id = "sP3d4" style='white-space:normal; width:800px;'> </pre> 				<pre style='white-space:normal;'> 					※ 실행순서 및 메모리상태는 A키(이전) 및 D키(다음)를 눌러도 확인할 수 있습니다  				</pre> 				<br><br> 			</div> 			<div id = "floatingBox"> 				<pre id = "outputBox" class ="outputBox" style = "color:White;height:290px;width:788px;padding:10px;margin:0px;"></pre>  				<div id = "intermediateResult"> 					<img id = "sP3d7"> 					<table style = "border-spacing:0px;margin:0px;table-layout:auto;"> 						<tbody id = "sP3d8"></tbody> 					</table> 				</div> 			</div> 		</div> 	</body> </html> 
