@@ -1,82 +1,166 @@
-<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7250753558435816" crossorigin="anonymous"></script> 		<link rel="stylesheet" href="../layout.css"> 		<script type="text/javascript" src="../functions.js"></script> 		<script> 			const sP3d10 = [ [ "FILE *" ], [ "fopen","fopen()" ], [ "rt" ], [ "fgets","fgets()" ], [ "fclose","fclose()" ], 							]; 		</script> 	</head> 	<body oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> C 프로그래밍 </div> 			<div id = "navigationBox"><ol><li><a href='../Cf1i/Cf1i1.html'>출력</a></li><li><a href='../Cf2i/Cf2i1.html'>입력</a></li><li><a href='../Cf3i/Cf3i1.html'>변수/연산자</a></li><li><a href='../Cf4i/Cf4i1.html'>선택문(삼항연산자/switch)</a></li><li><a href='../Cf5i/Cf5i1.html'>선택문(if)</a></li><li><a href='../Cf6i/Cf6i1.html'>반복문(while)</a></li><li><a href='../Cf7i/Cf7i1.html'>반복문(for)</a></li><li><a href='../Cf8i/Cf8i1.html'>배열</a></li><li><a href='../Cf9i/Cf9i1.html'>문자열</a></li><li><a href='../Cg0i/Cg0i1.html'>함수</a></li><li><a href='../Cg1i/Cg1i1.html'>포인터</a></li><li><a href='../Cg2i/Cg2i1.html'>파일입출력</a></li><ul><li><a href='../Cg2i/Cg2i1.html'>파일 복사</a></li><li><a href='../Cg2i/Cg2i2.html'>영한 사전</a></li><li><a href='../Cg2i/Cg2i3.html'>날씨 뉴스</a></li><li><a href='../Cg2i/Cg2i4.html'>스포츠 뉴스</a></li><ul><li><a href='Cg2i4.html'>코드읽기</a></li><li><a href='Cg2i4a.html'>알고리즘</a></li><li><a href='Cg2i4k.html'>키워드</a></li><li><a href='Cg2i4b.html'>빈칸채우기</a></li><li><a href='Cg2i4s.html'>실행순서</a></li><li><a href='Cg2i4m.html'>실행상태</a></li><li><a href='https://github.com/CodeReading101/C/blob/main/Chapter12/SportsNews.c' target='code'>소스코드</a></li></ul><li><a href='../Cg2i/Cg2i5.html'>미로 맵 출력</a></li></ul><li><a href='../Cg3i/Cg3i1.html'>열거형/구조체/동적할당</a></li><li><a href='../Cg4i/Cg4i1.html'>함수자료전달</a></li><li><a href='../Cg5i/Cg5i1.html'>전처리기/파일분할</a></li></ol></div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>파일에서 야구 경기 정보를 읽어들여 그 결과를 바탕으로 스포츠 뉴스를 출력하는 문제입니다 이를 해결하는 다음 프로그램에 대해 빈칸을 채우세요 참고로, 야구 경기 정보는 아래와 같이 '정보 [ 탭 ] 정보 [ 탭 ] 정보 [ 탭 ] ...'의 구조로 저장되어 있습니다. 
-<pre>
---------- 파일 baseball1.txt의 내용 --------- 
-15	롯데	KT	10	1	김승회	정대현	정훈	6회초1아웃	2	박진형
-18	한화	SK	8	4	정우람	문승원	강경학	6회초1아웃	3	김재영
-21	LG	KIA	6	1	오석주	강이준	양원혁	2회초2아웃	2	오지환
---------- 파일 baseball2.txt의 내용 --------- 
-18	한화	SK	8	4	정우람	문승원	강경학	6회초1아웃	3	김재영
---------- 파일 baseball3.txt의 내용 --------- 
-21	LG	KIA	6	1	오석주	강이준	양원혁	2회초2아웃	2	오지환
-</pre>
-관련신문기사 - http://news1.kr/articles/?2246990</pre> 				<pre class='selectable'>파일이름을 입력해 주세요 : <b><font color='red'>baseball1.txt</font></b>
-( KT 1 : 롯데 10 )
-KT는 15일 열린 프로야구 롯데와의 홈 경기에서 1-10점으로 크게 패하며 홈 팬들을 실망시켰다. 
-KT는 정대현을 선발로 등판시켰고 롯데는 김승회가 나섰다. 롯데는 정훈이 맹활약을 펼쳤다. 
-정훈은 6회초1아웃에 맞이한 타석에서 2점을 뽑아내며, 롯데의 9점차 승리를 이끈 일등공신이 됐다. 
-KT는 박진형을 끝까지 공략하지 못하며 안방에서 롯데에 9점차 승리를 내주었다.
-( SK 4 : 한화 8 )
-SK는 18일 열린 프로야구 한화와의 홈 경기에서 4-8점으로 크게 패하며 홈 팬들을 실망시켰다. 
-SK는 문승원을 선발로 등판시켰고 한화는 정우람가 나섰다. 한화는 강경학이 맹활약을 펼쳤다. 
-강경학은 6회초1아웃에 맞이한 타석에서 3점을 뽑아내며, 한화의 4점차 승리를 이끈 일등공신이 됐다. 
-SK는 김재영을 끝까지 공략하지 못하며 안방에서 한화에 4점차 승리를 내주었다.
-( KIA 1 : LG 6 )
-KIA는 21일 열린 프로야구 LG와의 홈 경기에서 1-6점으로 크게 패하며 홈 팬들을 실망시켰다. 
-KIA는 강이준을 선발로 등판시켰고 LG는 오석주가 나섰다. LG는 양원혁이 맹활약을 펼쳤다. 
-양원혁은 2회초2아웃에 맞이한 타석에서 2점을 뽑아내며, LG의 5점차 승리를 이끈 일등공신이 됐다. 
-KIA는 오지환을 끝까지 공략하지 못하며 안방에서 LG에 5점차 승리를 내주었다.
-</pre><br><pre class='selectable'>파일이름을 입력해 주세요 : <b><font color='red'>baseball2.txt</font></b>
-( SK 4 : 한화 8 )
-SK는 18일 열린 프로야구 한화와의 홈 경기에서 4-8점으로 크게 패하며 홈 팬들을 실망시켰다. 
-SK는 문승원을 선발로 등판시켰고 한화는 정우람가 나섰다. 한화는 강경학이 맹활약을 펼쳤다. 
-강경학은 6회초1아웃에 맞이한 타석에서 3점을 뽑아내며, 한화의 4점차 승리를 이끈 일등공신이 됐다. 
-SK는 김재영을 끝까지 공략하지 못하며 안방에서 한화에 4점차 승리를 내주었다.
-</pre><br><pre class='selectable'>파일이름을 입력해 주세요 : <b><font color='red'>baseball3.txt</font></b>
-( KIA 1 : LG 6 )
-KIA는 21일 열린 프로야구 LG와의 홈 경기에서 1-6점으로 크게 패하며 홈 팬들을 실망시켰다. 
-KIA는 강이준을 선발로 등판시켰고 LG는 오석주가 나섰다. LG는 양원혁이 맹활약을 펼쳤다. 
-양원혁은 2회초2아웃에 맞이한 타석에서 2점을 뽑아내며, LG의 5점차 승리를 이끈 일등공신이 됐다. 
-KIA는 오지환을 끝까지 공략하지 못하며 안방에서 LG에 5점차 승리를 내주었다.
+<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7250753558435816" crossorigin="anonymous"></script> 		<link rel="stylesheet" href="../layout.css"> 		<script type="text/javascript" src="../functions.js"></script> 		<script> 			const sP3d10 = [ [ "const" ], [ "static" ], [ "if" ], [ "==" ], [ "&&" ], [ "==" ], [ "return","return;" ], [ "for","for()" ], [ "<" ], [ "for","for()" ], [ "<" ], [ "if" ], [ "==" ], [ "&&" ], [ "==" ], [ "else" ], [ "const" ], [ "const" ], [ "const" ], [ "if" ], [ "<" ], [ "||" ], [ "<=" ], [ "||" ], [ "<" ], [ "||" ], [ "<=" ], [ "return","return;" ], [ "else if" ], [ "==" ], [ "return","return;" ], [ "else if" ], [ "==" ], [ "if" ], [ "move" ], [ "==" ], [ "return","return;" ], [ "if" ], [ "move" ], [ "==" ], [ "return","return;" ], [ "if" ], [ "move" ], [ "==" ], [ "return","return;" ], [ "if" ], [ "move" ], [ "==" ], [ "return","return;" ], [ "return","return;" ], [ "if" ], [ "move" ], [ "==" ], [ "else" ], [ "return","return;" ], 							]; 		</script> 	</head> 	<body oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> C 프로그래밍 </div> 			<div id = "navigationBox"><ol start=0><li><a href='../Cf0i/Cf0i0.html'>C 프로그래밍 시작</a></li><li><a href='../Cf1i/Cf1i0.html'>출력</a></li><li><a href='../Cf2i/Cf2i0.html'>입력</a></li><li><a href='../Cf3i/Cf3i0.html'>변수</a></li><li><a href='../Cf4i/Cf4i0.html'>연산자</a></li><li><a href='../Cf5i/Cf5i0.html'>선택문(삼항연산자/switch)</a></li><li><a href='../Cf6i/Cf6i0.html'>선택문(if)</a></li><li><a href='../Cf7i/Cf7i0.html'>반복문(while)</a></li><li><a href='../Cf8i/Cf8i0.html'>반복문(for)</a></li><li><a href='../Cf9i/Cf9i0.html'>배열</a></li><li><a href='../Cg0i/Cg0i0.html'>문자열</a></li><li><a href='../Cg1i/Cg1i0.html'>함수</a></li><li><a href='../Cg2i/Cg2i0.html'>재귀함수</a></li><ul><li><a href='../Cg2i/Cg2i1.html'>합계 Σ 계산</a></li><li><a href='../Cg2i/Cg2i2.html'>factorial 계산</a></li><li><a href='../Cg2i/Cg2i3.html'>10진수 2진수 변환</a></li><li><a href='../Cg2i/Cg2i4.html'>미로 탐색</a></li><ul><li><a href='Cg2i4.html'>코드읽기</a></li><li><a href='Cg2i4a.html'>알고리즘</a></li><li><a href='Cg2i4k.html'>키워드</a></li><li><a href='Cg2i4b.html'>빈칸채우기</a></li><li><a href='Cg2i4s.html'>실행순서</a></li><li><a href='Cg2i4m.html'>실행상태</a></li><li><a href='https://github.com/CodeReading101/C/blob/main/Chapter12/MazeMove.java' target='code'>소스코드</a></li></ul><li><a href='../Cg2i/Cg2i5.html'>하노이 탑</a></li></ul><li><a href='../Cg3i/Cg3i0.html'>포인터</a></li><li><a href='../Cg4i/Cg4i0.html'>파일입출력</a></li><li><a href='../Cg5i/Cg5i0.html'>열거형/구조체/동적할당</a></li><li><a href='../Cg6i/Cg6i0.html'>함수 자료 전달</a></li><li><a href='../Cg7i/Cg7i0.html'>전처리/파일분할</a></li></ol></div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>미로탐색문제를 해결하는 문제입니다 이를 해결하는 다음 프로그램에 대해 빈칸을 채우세요 </pre> 				<pre class='selectable'>캐릭터 현재 위치의 줄번호를 입력하세요 : <b><span style='color:rgb(255,0,0);'>3</span></b>
+캐릭터 현재 위치의 칸번호를 입력하세요 : <b><span style='color:rgb(255,0,0);'>5</span></b>
+<div style='font-family:monospace;line-height:1;'><span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>      <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>옷<span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>          <span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span> <br>
+<span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>      <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>        옷<span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span></div>미로 맵 탈출 성공! 
+</pre><br><pre class='selectable'>캐릭터 현재 위치의 줄번호를 입력하세요 : <b><span style='color:rgb(255,0,0);'>1</span></b>
+캐릭터 현재 위치의 칸번호를 입력하세요 : <b><span style='color:rgb(255,0,0);'>1</span></b>
+<div style='font-family:monospace;line-height:1;'><span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>옷    <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>          <span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span> <br>
+<span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>      <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>옷<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>          <span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span> <br>
+<span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>옷    <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>          <span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span> <br>
+<span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  옷  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>          <span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span> <br>
+<span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>    옷<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>          <span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span> <br>
+<span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>      <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>옷<span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>          <span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span> <br>
+<span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>      <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>옷<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>          <span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span> <br>
+<span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>      <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>    옷    <span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span> <br>
+<span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>      <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>      옷  <span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span> <br>
+<span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>      <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>        옷<span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span></div>미로 맵 탈출 성공! 
+</pre><br><pre class='selectable'>캐릭터 현재 위치의 줄번호를 입력하세요 : <b><span style='color:rgb(255,0,0);'>1</span></b>
+캐릭터 현재 위치의 칸번호를 입력하세요 : <b><span style='color:rgb(255,0,0);'>5</span></b>
+<div style='font-family:monospace;line-height:1;'><span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>      <span style='font-family:monospace;background-color:skyblue'>  </span>옷<span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>          <span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span></div>미로 맵 탈출 실패 
 </pre><br>  	  				<h4>코드 빈칸 채우기</h4> 				<pre style='white-space:pre;border:1px'>#include &lt;stdio.h&gt; 
  
-int main() { 
-	char date[1024]="", winningTeam[1024]="", losingTeam[1024]=""; 
-	int  winningPoint=0, losingPoint=0, bestPointScore=0; 
-	char winningPitcher[1024]="", losingPitcher[1024]=""; 
-	char bestPlayer[1024]="", bestPlayPoint[1024]="", missedPlayer[1024]=""; 
-	char filename[1024]="", line[1024]=""; 
-	<input id='blank0' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(0)'>inFile = NULL;							 
+int map[6][7] = { 
+                 { 1, 1, 1, 1, 1, 1, 1 }, 
+                 { 1, 0, 0, 0, 1, 0, 1 }, 
+                 { 1, 0, 1, 0, 1, 1, 1 }, 
+                 { 1, 1, 1, 0, 1, 0, 1 }, 
+                 { 1, 0, 0, 0, 0, 0, 2 }, 
+                 { 1, 1, 1, 1, 1, 1, 1 } 
+                }; 
+<input id='blank0' type='text' required minlength='1' maxlength='30' size='5' onchange='sP3f6(0)'> int HEIGHT = 6, WIDTH = 7; 
  
-	printf( "파일이름을 입력해 주세요 : " ); 
-	scanf( "%s", filename ); 
- 
-	if ( ( inFile = <input id='blank1' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(1)'>( filename, "<input id='blank2' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(2)'>" ) ) == NULL ) { 
-		printf( "[오류] 파일을 열 수 없습니다!" ); 
-		return -1; 
-	} 
-	while ( <input id='blank3' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(3)'>( line, 1024, inFile ) != NULL ) {					 
-		if( sscanf( line, "%s\t%s\t%s\t%d\t%d\t%s\t%s\t%s\t%s\t%d\t%s\n",  
-			date, winningTeam, losingTeam, &winningPoint, &losingPoint,  
-			winningPitcher, losingPitcher,  
-			bestPlayer, bestPlayPoint, &bestPointScore, missedPlayer ) == 0 ) { 
-			printf( "[오류] 한 경기씩 주요 경기 내용 읽어올 수 없습니다." ); 
-			break; 
+void printMap( int row, int column ) { 
+	<input id='blank1' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(1)'> int previousRow = -1, previousColumn = -1; 
+	<input id='blank2' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(2)'> ( ( row <input id='blank3' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(3)'> previousRow ) <input id='blank4' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(4)'> ( column <input id='blank5' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(5)'> previousColumn ) ) 
+		<input id='blank6' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(6)'>; 
+		 
+	char symbol[4][32] = { "  ", " \033[44m   \033[0m", " \033[34m문 \033[0m", "  " }; 
+	<input id='blank7' type='text' required minlength='1' maxlength='30' size='3' onchange='sP3f6(7)'>( int i = 0; i <input id='blank8' type='text' required minlength='1' maxlength='30' size='1' onchange='sP3f6(8)'> HEIGHT; i++ ) { 
+		<input id='blank9' type='text' required minlength='1' maxlength='30' size='3' onchange='sP3f6(9)'>( int j = 0; j <input id='blank10' type='text' required minlength='1' maxlength='30' size='1' onchange='sP3f6(10)'> WIDTH; j++ ) { 
+			<input id='blank11' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(11)'>( ( i <input id='blank12' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(12)'> row ) <input id='blank13' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(13)'> ( j <input id='blank14' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(14)'> column ) ) 
+				printf( "옷" ); 
+			<input id='blank15' type='text' required minlength='1' maxlength='30' size='4' onchange='sP3f6(15)'>  
+				printf( "%s", symbol[ map[i][j] ] ); 
 		} 
- 
-		printf( "\n\n( %s %d : %s %d )\n",  
-			losingTeam, losingPoint, winningTeam, winningPoint ); 
-		printf( "%s는 %s일 열린 프로야구 %s와의 홈 경기에서 %d-%d점으로 크게 패하며 ",  
-			losingTeam, date, winningTeam, losingPoint, winningPoint ); 
-		printf( "홈 팬들을 실망시켰다. \n%s는 %s을 선발로 등판시켰고 %s는 %s가 나섰다. ",  
-		 losingTeam, losingPitcher, winningTeam, winningPitcher ); 
-		printf( "%s는 %s이 맹활약을 펼쳤다. \n%s은 %s에 맞이한 타석에서 %d점을 뽑아내며, ",  
-			winningTeam, bestPlayer, bestPlayer, bestPlayPoint, bestPointScore ); 
-		printf( "%s의 %d점차 승리를 이끈 일등공신이 됐다. \n%s는 %s을 끝까지 공략하지 못하며 ",  
-			winningTeam, ( winningPoint - losingPoint ), losingTeam, missedPlayer ); 
-		printf( "안방에서 %s에 %d점차 승리를 내주었다.", winningTeam, ( winningPoint - losingPoint ) ); 
+		printf( "\n" ); 
 	} 
+	 
+	printf( "\n" ); 
+	previousRow = row; 
+	previousColumn = column; 
+}	 
  
-	<input id='blank4' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(4)'>( inFile );								 
+<input id='blank16' type='text' required minlength='1' maxlength='30' size='5' onchange='sP3f6(16)'> int SUCCESS = 2; 
+<input id='blank17' type='text' required minlength='1' maxlength='30' size='5' onchange='sP3f6(17)'> int VISITED = 3; 
+<input id='blank18' type='text' required minlength='1' maxlength='30' size='5' onchange='sP3f6(18)'> int NOTVISITED = 0; 
  
-	return 0; 
-} 	 			</pre> 			</div> 		</div> 	</body> </html> 
+int move( int row, int column ) { 
+	<input id='blank19' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(19)'> ( ( row <input id='blank20' type='text' required minlength='1' maxlength='30' size='1' onchange='sP3f6(20)'> 0  ) <input id='blank21' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(21)'> ( HEIGHT <input id='blank22' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(22)'> row ) <input id='blank23' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(23)'> ( column <input id='blank24' type='text' required minlength='1' maxlength='30' size='1' onchange='sP3f6(24)'> 0 ) <input id='blank25' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(25)'> ( WIDTH <input id='blank26' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(26)'> column ) ) 
+		<input id='blank27' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(27)'> 0; 
+	<input id='blank28' type='text' required minlength='1' maxlength='30' size='7' onchange='sP3f6(28)'> ( map[row][column] <input id='blank29' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(29)'> SUCCESS ) 
+		<input id='blank30' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(30)'> SUCCESS; 
+	<input id='blank31' type='text' required minlength='1' maxlength='30' size='7' onchange='sP3f6(31)'> ( map[row][column] <input id='blank32' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(32)'> NOTVISITED ) { 
+		map[row][column] = VISITED; 
+ 
+		printMap( row, column ); 
+		<input id='blank33' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(33)'> ( <input id='blank34' type='text' required minlength='1' maxlength='30' size='4' onchange='sP3f6(34)'>( row + 1, column ) 
+		                             <input id='blank35' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(35)'> SUCCESS ) 
+			<input id='blank36' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(36)'> SUCCESS;                             
+		printMap( row, column );	 
+		<input id='blank37' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(37)'> ( <input id='blank38' type='text' required minlength='1' maxlength='30' size='4' onchange='sP3f6(38)'>( row, column + 1 ) 
+		                             <input id='blank39' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(39)'> SUCCESS ) 
+			<input id='blank40' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(40)'> SUCCESS;                             
+		printMap( row, column );	 
+		<input id='blank41' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(41)'> ( <input id='blank42' type='text' required minlength='1' maxlength='30' size='4' onchange='sP3f6(42)'>( row - 1, column ) 
+		                             <input id='blank43' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(43)'> SUCCESS ) 
+			<input id='blank44' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(44)'> SUCCESS;          
+		printMap( row, column );	 
+		<input id='blank45' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(45)'> ( <input id='blank46' type='text' required minlength='1' maxlength='30' size='4' onchange='sP3f6(46)'>( row, column - 1 )  
+		                             <input id='blank47' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(47)'> SUCCESS ) 
+			<input id='blank48' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(48)'> SUCCESS;          
+		printMap( row, column );	 
+	} 
+		 
+	<input id='blank49' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(49)'> 0; 
+} 
+ 
+int main() { 
+	printf( "캐릭터 현재 위치의 줄번호를 입력하세요 : " ); 
+	int row = 0; 
+	scanf( "%d", &row ); 
+	printf( "캐릭터 현재 위치의 칸번호를 입력하세요 : " ); 
+	int column = 0; 
+	scanf( "%d", &column ); 
+	<input id='blank50' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(50)'> ( <input id='blank51' type='text' required minlength='1' maxlength='30' size='4' onchange='sP3f6(51)'>( row, column )  
+	                         <input id='blank52' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(52)'> SUCCESS ) 
+		printf( "\n미로 맵 탈출 성공!\n" ); 
+	<input id='blank53' type='text' required minlength='1' maxlength='30' size='4' onchange='sP3f6(53)'>   
+		printf( "\n미로 맵 탈출 실패\n" ); 
+ 
+	<input id='blank54' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(54)'> 0; 
+} 	 			</pre> 				<br><br><br><br><br><br><br><br> &nbsp;  			</div> 		</div> 	</body> </html> 
