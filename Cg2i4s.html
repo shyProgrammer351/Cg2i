@@ -11,6 +11,12 @@
 <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
 <span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
 <span style='font-family:monospace;background-color:skyblue'>  </span>        옷<span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span> <br>
+<span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>      <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>          옷
 <span style='font-family:monospace;background-color:skyblue'>              </span></div>미로 맵 탈출 성공! 
 </pre><br>  	 				<h4>프로그램 코드</h4> 				<pre></pre><pre id="code0" class="unselectable codeClass">	#include &lt;stdio.h&gt;
 
@@ -52,8 +58,10 @@
 </pre><pre id="codeFb" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('Fb')">Fb	int move( int row, int column ) {
 </pre><pre id="code0" class="unselectable codeClass">		if ( ( row &lt; 0  ) || ( HEIGHT &lt;= row ) || ( column &lt; 0 ) || ( WIDTH &lt;= column ) )
 </pre><pre id="codeF11" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('F11')">F11			return 0;
-</pre><pre id="code0" class="unselectable codeClass">		else if ( map[row][column] == SUCCESS )
+</pre><pre id="code0" class="unselectable codeClass">		else if ( map[row][column] == SUCCESS ) {
+</pre><pre id="code0" class="unselectable codeClass">			printMap( row, column );
 </pre><pre id="codeF12" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('F12')">F12			return SUCCESS;
+</pre><pre id="code0" class="unselectable codeClass">		}
 </pre><pre id="code0" class="unselectable codeClass">		else if ( map[row][column] == NOTVISITED ) {
 </pre><pre id="codeF13" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('F13')">F13			map[row][column] = VISITED;
 

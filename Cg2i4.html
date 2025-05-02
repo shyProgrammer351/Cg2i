@@ -11,6 +11,12 @@
 <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
 <span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
 <span style='font-family:monospace;background-color:skyblue'>  </span>        옷<span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span> <br>
+<span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>      <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>          옷
 <span style='font-family:monospace;background-color:skyblue'>              </span></div>미로 맵 탈출 성공! 
 </pre><br><pre class='selectable'>캐릭터 현재 위치의 줄번호를 입력하세요 : <b><span style='color:rgb(255,0,0);'>1</span></b>
 캐릭터 현재 위치의 칸번호를 입력하세요 : <b><span style='color:rgb(255,0,0);'>1</span></b>
@@ -73,6 +79,12 @@
 <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
 <span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
 <span style='font-family:monospace;background-color:skyblue'>  </span>        옷<span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span> <br>
+<span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>      <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>          옷
 <span style='font-family:monospace;background-color:skyblue'>              </span></div>미로 맵 탈출 성공! 
 </pre><br><pre class='selectable'>캐릭터 현재 위치의 줄번호를 입력하세요 : <b><span style='color:rgb(255,0,0);'>1</span></b>
 캐릭터 현재 위치의 칸번호를 입력하세요 : <b><span style='color:rgb(255,0,0);'>5</span></b>
@@ -131,9 +143,11 @@
 </pre>
 <pre id="codeF11" class="unselectable codeClass">F11			<a href='../Cg1i/Cg1i0.html' target='keyword'>return</a> 0;
 </pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 먼저, 목표 지점이면 길 찾기 종료 </b></font>
-</pre><pre id="code0" class="unselectable codeClass">		<a href='../Cf6i/Cf6i0.html' target='keyword'>else if</a> ( map[row][column] <a href='../Cf4i/Cf4i0.html#2' target='keyword'>==</a> SUCCESS )
+</pre><pre id="code0" class="unselectable codeClass">		<a href='../Cf6i/Cf6i0.html' target='keyword'>else if</a> ( map[row][column] <a href='../Cf4i/Cf4i0.html#2' target='keyword'>==</a> SUCCESS ) {
+</pre><pre id="code0" class="unselectable codeClass">			printMap( row, column );
 </pre>
 <pre id="codeF12" class="unselectable codeClass">F12			<a href='../Cg1i/Cg1i0.html' target='keyword'>return</a> SUCCESS;
+</pre><pre id="code0" class="unselectable codeClass">		}
 </pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 아직 지나가지 않은 길이면 지나간 흔적을 남기기 </b></font>
 </pre><pre id="code0" class="unselectable codeClass">		<a href='../Cf6i/Cf6i0.html' target='keyword'>else if</a> ( map[row][column] <a href='../Cf4i/Cf4i0.html#2' target='keyword'>==</a> NOTVISITED ) {
 </pre>

@@ -11,6 +11,12 @@
 <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
 <span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
 <span style='font-family:monospace;background-color:skyblue'>  </span>        옷<span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span> <br>
+<span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>      <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>          옷
 <span style='font-family:monospace;background-color:skyblue'>              </span></div>미로 맵 탈출 성공! 
 </pre><br><pre class='selectable'>캐릭터 현재 위치의 줄번호를 입력하세요 : <b><span style='color:rgb(255,0,0);'>1</span></b>
 캐릭터 현재 위치의 칸번호를 입력하세요 : <b><span style='color:rgb(255,0,0);'>1</span></b>
@@ -73,6 +79,12 @@
 <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
 <span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
 <span style='font-family:monospace;background-color:skyblue'>  </span>        옷<span style='font-family:monospace;color:skyblue;'>문</span>
+<span style='font-family:monospace;background-color:skyblue'>              </span> <br>
+<span style='font-family:monospace;background-color:skyblue'>              </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>      <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>      </span>
+<span style='font-family:monospace;background-color:skyblue'>      </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>  <span style='font-family:monospace;background-color:skyblue'>  </span>
+<span style='font-family:monospace;background-color:skyblue'>  </span>          옷
 <span style='font-family:monospace;background-color:skyblue'>              </span></div>미로 맵 탈출 성공! 
 </pre><br><pre class='selectable'>캐릭터 현재 위치의 줄번호를 입력하세요 : <b><span style='color:rgb(255,0,0);'>1</span></b>
 캐릭터 현재 위치의 칸번호를 입력하세요 : <b><span style='color:rgb(255,0,0);'>5</span></b>
@@ -122,8 +134,10 @@ void printMap( int row, int column ) {
 int move( int row, int column ) { 
 	<input id='blank19' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(19)'> ( ( row <input id='blank20' type='text' required minlength='1' maxlength='30' size='1' onchange='sP3f6(20)'> 0  ) <input id='blank21' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(21)'> ( HEIGHT <input id='blank22' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(22)'> row ) <input id='blank23' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(23)'> ( column <input id='blank24' type='text' required minlength='1' maxlength='30' size='1' onchange='sP3f6(24)'> 0 ) <input id='blank25' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(25)'> ( WIDTH <input id='blank26' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(26)'> column ) ) 
 		<input id='blank27' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(27)'> 0; 
-	<input id='blank28' type='text' required minlength='1' maxlength='30' size='7' onchange='sP3f6(28)'> ( map[row][column] <input id='blank29' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(29)'> SUCCESS ) 
+	<input id='blank28' type='text' required minlength='1' maxlength='30' size='7' onchange='sP3f6(28)'> ( map[row][column] <input id='blank29' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(29)'> SUCCESS ) { 
+		printMap( row, column ); 
 		<input id='blank30' type='text' required minlength='1' maxlength='30' size='6' onchange='sP3f6(30)'> SUCCESS; 
+	} 
 	<input id='blank31' type='text' required minlength='1' maxlength='30' size='7' onchange='sP3f6(31)'> ( map[row][column] <input id='blank32' type='text' required minlength='1' maxlength='30' size='2' onchange='sP3f6(32)'> NOTVISITED ) { 
 		map[row][column] = VISITED; 
  
